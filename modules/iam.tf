@@ -35,7 +35,7 @@ resource "aws_iam_policy" "s3_policy" {
 
 resource "aws_iam_role_policy_attachment" "s3_attachment" {
   role        = aws_iam_role.s3_role.name
-  policy_arn    = aws_iam_policy.s3_policy.id
+  policy_arn    = aws_iam_policy.s3_policy
 }
 
 resource "aws_iam_instance_profile" "s3_profile" {

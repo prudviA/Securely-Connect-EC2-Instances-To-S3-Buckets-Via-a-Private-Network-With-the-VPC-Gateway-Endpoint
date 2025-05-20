@@ -5,7 +5,7 @@ resource "aws_instance" "bastion_host" {
   instance_type = "t2.micro"
   subnet_id = aws_subnet.public_subnet.id
   key_name = "cicd"
-  vpc_security_group_ids = [aws_security_group.private_sg.id]
+  vpc_security_group_ids = [aws_security_group.bastion_sg]
 
   tags = {
     Name = "bastion_host"
